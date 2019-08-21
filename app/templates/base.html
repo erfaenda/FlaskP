@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }} - Малюська бложег</title>
+    {%else %}
+    <title>Добро пожаловать в Малюску бложег!</title>
+    {% endif %}
+</head>
+<body>
+    <div>Малюська бложег: <a href="/index">Домой</a></div>
+    <hr>
+    {% block content %} {% endblock %}
+</body>
+</html>

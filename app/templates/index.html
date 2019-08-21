@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }} - Малюська бложег</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
     <h1>Добро пожаловать, {{ user.username }}!</h1>
-</body>
-</html>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} говорит: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
