@@ -10,8 +10,8 @@
 </head>
 <body>
     <div>Малюська бложег:
-        <a href="/index">Домой</a>
-        <a href="/login">Вход</a>
+        <a href="{{ url_for('index') }}">Домой</a>
+        <a href="{{ url_for('login') }}">Вход</a>
     </div>
     <hr>
     {% with messages = get_flashed_messages() %}
